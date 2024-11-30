@@ -8,13 +8,20 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid()) // Unique identifier for the user.
-  username  String   @unique // Unique username for each user.
-  password  String // Hashed password for authentication.
+  id            String          @id @default(cuid())
+  name          String?
+  email         String          @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  // Optional for WebAuthn support
+  Authenticator Authenticator[]
+ 
   firstName String? // Optional first name of the user.
   lastName  String? // Optional last name of the user.
-  createdAt DateTime @default(now()) // Timestamp for when the user is created.
-  updatedAt DateTime @updatedAt // Timestamp for the last update of the user record.
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   Profile   Profile? // One-to-one relation with the Profile model.
 }
 
@@ -79,4 +86,61 @@ enum E_country {
   USA // United States.
   UAE // United Arab Emirates.
   UK // United Kingdom.
+}
+
+// Bellow is related to next-auth@beta
+ 
+model Account {
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+ 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@id([provider, providerAccountId])
+}
+ 
+model Session {
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+ 
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+ 
+  @@id([identifier, token])
+}
+ 
+// Optional for WebAuthn support
+model Authenticator {
+  credentialID         String  @unique
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@id([userId, credentialID])
 }
