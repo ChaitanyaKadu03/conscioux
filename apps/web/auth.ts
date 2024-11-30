@@ -3,4 +3,8 @@ import Google from "next-auth/providers/google"
 
 export const { handlers, signIn, signOut, auth }: any = NextAuth({
     providers: [Google],
+    pages: {
+        signIn: "/api/auth/signin",
+        signOut: "/api/auth/logout",
+    }
 })
