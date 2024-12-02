@@ -27,7 +27,6 @@ model User {
 
 model Profile {
   id         String      @id @default(uuid()) // Unique identifier for the profile.
-  imageUrl   String // URL for the profile picture.
   contact    String?     @unique // Optional unique contact information (e.g., phone or email).
   isPremium  E_isPremium @default(FREE) // Indicates the premium status of the user (FREE, PREMIUM, INFINITY).
   stats      Int         @default(0) // Represents total profit or loss (e.g., in USD or preferred currency).

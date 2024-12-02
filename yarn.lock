@@ -305,7 +305,7 @@
   resolved "file:packages/eslint-config"
 
 "@repo/postgresqldb@*", "@repo/postgresqldb@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\postgresqlDB":
-  version "1.0.0"
+  version "0.1.0"
   resolved "file:packages/postgresqlDB"
   dependencies:
     "@auth/prisma-adapter" "^2.7.4"
@@ -965,6 +965,11 @@ axios@*, axios@^1.7.8:
 "backend@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\apps\\backend":
   version "0.1.0"
   resolved "file:apps/backend"
+  dependencies:
+    "@repo/postgresqldb" "*"
+    "@types/express" "^5.0.0"
+    express "^4.21.1"
+    zod "^3.23.8"
 
 balanced-match@^1.0.0:
   version "1.0.2"
