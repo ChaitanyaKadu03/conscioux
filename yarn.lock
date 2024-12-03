@@ -304,9 +304,12 @@
   version "0.0.0"
   resolved "file:packages/eslint-config"
 
-"@repo/postgresqldb@*", "@repo/postgresqldb@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\postgresqlDB":
+"@repo/postgresqldb@*":
+  resolved "git+ssh://git@github.com/packages/postgresqlDB.git"
+
+"@repo/prismadb@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\prismaDB":
   version "0.1.0"
-  resolved "file:packages/postgresqlDB"
+  resolved "file:packages/prismaDB"
   dependencies:
     "@auth/prisma-adapter" "^2.7.4"
     "@prisma/client" "^6.0.0"
@@ -968,6 +971,7 @@ axios@*, axios@^1.7.8:
   dependencies:
     "@repo/postgresqldb" "*"
     "@types/express" "^5.0.0"
+    dotenv "^16.4.5"
     express "^4.21.1"
     zod "^3.23.8"
 
@@ -1552,9 +1556,9 @@ dot-case@^2.1.0:
     no-case "^2.2.0"
 
 dotenv@^16.4.5:
-  version "16.4.5"
-  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz"
-  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
+  version "16.4.6"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.6.tgz"
+  integrity sha512-JhcR/+KIjkkjiU8yEpaB/USlzVi3i5whwOjpIRNGi9svKEXZSe+Qp6IWAjFjv+2GViAoDRCUv/QLNziQxsLqDg==
 
 dotenv@16.0.3:
   version "16.0.3"

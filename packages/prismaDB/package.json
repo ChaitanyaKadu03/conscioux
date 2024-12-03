@@ -1,7 +1,6 @@
 {
-  "name": "@repo/postgresqldb",
+  "name": "@repo/prismadb",
   "version": "0.1.0",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +8,7 @@
   "exports": {
     "./prisma": "./src/index.ts"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "prisma": "^6.0.0"
   },
