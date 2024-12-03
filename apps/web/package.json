@@ -12,6 +12,8 @@
   "dependencies": {
     "@repo/ui": "*",
     "@repo/prismadb": "*",
+    "@repo/types": "*",
+    "@repo/constructors": "*",
     "@types/axios": "^0.14.4",
     "axios": "^1.7.8",
     "next": "15.0.3",

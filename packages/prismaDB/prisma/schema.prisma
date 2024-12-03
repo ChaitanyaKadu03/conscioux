@@ -15,6 +15,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  settings      Settings[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
 
@@ -26,14 +27,12 @@ model User {
 }
 
 model Profile {
-  id         String   @id @default(uuid()) // Unique identifier for the profile.
-  contact    String?  @unique // Optional unique contact information (e.g., phone or email).
-  isPremium  Member   @default(FREE) // Indicates the premium status of the user (FREE, PREMIUM, INFINITY).
-  stats      Int      @default(0) // Represents total profit or loss (e.g., in USD or preferred currency).
-  user       User     @relation(fields: [userId], references: [id]) // Relation to the User model.
-  userId     String   @unique // Unique foreign key linking the profile to a user.
-  settingsId String   @unique // Unique foreign key linking the profile to the Settings model.
-  settings   Settings @relation(fields: [settingsId], references: [id]) // Relation to the Settings model for user preferences.
+  id        String  @id @default(uuid()) // Unique identifier for the profile.
+  contact   String? @unique // Optional unique contact information (e.g., phone or email).
+  isPremium Member  @default(FREE) // Indicates the premium status of the user (FREE, PREMIUM, INFINITY).
+  stats     Int     @default(0) // Represents total profit or loss (e.g., in USD or preferred currency).
+  user      User    @relation(fields: [userId], references: [id]) // Relation to the User model.
+  userId    String  @unique // Unique foreign key linking the profile to a user.
 }
 
 model Settings {
@@ -42,7 +41,8 @@ model Settings {
   theme    DeviceTheme        @default(DARK) // Preferred theme (e.g., dark mode).
   currency CurrencyCodes      @default(USD) // Preferred currency for viewing data.
   country  SupportedCountries @default(UNITED_STATES) // User's country of preference or location.
-  profile  Profile? // One-to-one relation with the Profile model.
+  userId   String             @unique // Unique foreign key linking the profile to a user.
+  user     User               @relation(fields: [userId], references: [id]) // Relation to the User model.
 }
 
 // Bellow is related to next-auth@beta
@@ -101,8 +101,6 @@ model Authenticator {
 
   @@id([userId, credentialID])
 }
-
-
 
 enum Member {
   FREE

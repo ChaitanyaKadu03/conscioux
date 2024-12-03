@@ -1,17 +1,19 @@
 {
-  "name": "@repo/types",
+  "name": "@repo/constructors",
   "version": "0.1.0",
-  "main": "index.js",
   "scripts": {
     "build": "tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "exports": {
-    "./*": "./src/*",
-    "./database": "./dist/database.js"
-  },
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@repo/types": "*"
+  },
+  "exports": {
+    "./*": "./dist/*",
+    "./prismadb": "./dist/prismadb.js"
   }
 }

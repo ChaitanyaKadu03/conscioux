@@ -300,6 +300,12 @@
   dependencies:
     "@prisma/debug" "6.0.0"
 
+"@repo/constructors@*", "@repo/constructors@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\constructors":
+  version "0.1.0"
+  resolved "file:packages/constructors"
+  dependencies:
+    "@repo/types" "*"
+
 "@repo/eslint-config@*", "@repo/eslint-config@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\eslint-config":
   version "0.0.0"
   resolved "file:packages/eslint-config"
@@ -307,7 +313,7 @@
 "@repo/postgresqldb@*":
   resolved "git+ssh://git@github.com/packages/postgresqlDB.git"
 
-"@repo/prismadb@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\prismaDB":
+"@repo/prismadb@*", "@repo/prismadb@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\prismaDB":
   version "0.1.0"
   resolved "file:packages/prismaDB"
   dependencies:
@@ -315,7 +321,7 @@
     "@prisma/client" "^6.0.0"
     dotenv "^16.4.5"
 
-"@repo/types@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\types":
+"@repo/types@*", "@repo/types@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\types":
   version "0.1.0"
   resolved "file:packages/types"
 
@@ -1556,9 +1562,9 @@ dot-case@^2.1.0:
     no-case "^2.2.0"
 
 dotenv@^16.4.5:
-  version "16.4.6"
-  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.6.tgz"
-  integrity sha512-JhcR/+KIjkkjiU8yEpaB/USlzVi3i5whwOjpIRNGi9svKEXZSe+Qp6IWAjFjv+2GViAoDRCUv/QLNziQxsLqDg==
+  version "16.4.5"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz"
+  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
 
 dotenv@16.0.3:
   version "16.0.3"
@@ -4744,7 +4750,8 @@ wcwidth@^1.0.1:
   version "0.1.0"
   resolved "file:apps/web"
   dependencies:
-    "@repo/postgresqldb" "*"
+    "@repo/prismadb" "*"
+    "@repo/types" "*"
     "@repo/ui" "*"
     "@types/axios" "^0.14.4"
     axios "^1.7.8"
