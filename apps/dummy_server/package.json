@@ -1,17 +1,20 @@
 {
   "name": "dummy_server",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
-    "dev": "tsc -b && node ./dist/index.js --port 3006",
+    "dev": "tsc -b && node ./dist/index.js",
     "build": "tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@repo/constructors": "*",
-    "@repo/types": "*",
     "@repo/redisdb": "*",
+    "@repo/types": "*",
     "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "express-rate-limit": "^7.4.1",
+    "node-cron": "^3.0.3",
     "typescript": "^5.7.2",
     "ws": "^8.18.0"
   }
