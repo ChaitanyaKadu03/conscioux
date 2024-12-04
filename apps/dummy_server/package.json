@@ -1,0 +1,18 @@
+{
+  "name": "dummy_server",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "tsc -b && node ./dist/index.js --port 3006",
+    "build": "tsc -b",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@repo/constructors": "*",
+    "@repo/types": "*",
+    "@repo/redisdb": "*",
+    "axios": "^1.7.9",
+    "express-rate-limit": "^7.4.1",
+    "typescript": "^5.7.2",
+    "ws": "^8.18.0"
+  }
+}
