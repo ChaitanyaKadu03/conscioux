@@ -12,24 +12,29 @@ export async function dummyData() {
 
             const result: any = await axios.get("https://api.backpack.exchange/api/v1/tickers")
 
+            console.log("1a")
             resolve(result.data);
-
+            
         } catch (error) {
             reject(error);
         }
-
+        
     }).then(async (resolve: any) => {
+        
+        console.log("2a")
+        let data: string | null = await redis.get("token");
 
-        const coin = {
-            quote: {
-                USD: {
-                    price: resolve[0].lastPrice
-                }
-            }
+        if (!data) {
+            return;
         }
 
-        await redis.hset("token", coin);
-        await redis.pexpire("token", 5000);
+        let newData = JSON.parse(data);
+
+        newData.quote.USD.price = resolve[0].lastPrice;
+
+        await redis.set("token", JSON.stringify(newData));
+        console.log("DUMMYDATA Updated...")
+        return;
 
     }).catch(err => {
 
@@ -37,5 +42,3 @@ export async function dummyData() {
 
     })
 }
-
-dummyData()

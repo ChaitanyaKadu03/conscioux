@@ -17,20 +17,23 @@ export async function realtimeData() {
                 }
             )
 
+            console.log("1")
             resolve(result.data);
-
+            
         } catch (error) {
             reject(error);
         }
-
+        
     }).then(async (resolve: any) => {
+        
+        console.log("2")
+        await redis.set("token", JSON.stringify(resolve.data[0]));
+        console.log("REALTIMEDATA Updated...")
 
-        await redis.hset("token", resolve.data[0]);
-        await redis.pexpire("token", 5000);
         return;
-        
+
     }).catch(err => {
-        
+
         console.log(err)
         return;
 
@@ -38,5 +41,3 @@ export async function realtimeData() {
 
     return;
 }
-
-realtimeData()
