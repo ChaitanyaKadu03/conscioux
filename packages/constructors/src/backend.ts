@@ -1,4 +1,4 @@
-export class ReturnJson {
+export class BackendReturn {
     public statusCode: number;
     public success: boolean;
     public message: string;

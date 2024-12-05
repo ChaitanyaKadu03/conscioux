@@ -315,9 +315,6 @@
   version "0.0.0"
   resolved "file:packages/eslint-config"
 
-"@repo/postgresqldb@*":
-  resolved "git+ssh://git@github.com/packages/postgresqlDB.git"
-
 "@repo/prismadb@*", "@repo/prismadb@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\packages\\prismaDB":
   version "0.1.0"
   resolved "file:packages/prismaDB"
@@ -992,7 +989,8 @@ axios@*, axios@^1.7.8, axios@^1.7.9:
   version "0.1.0"
   resolved "file:apps/backend"
   dependencies:
-    "@repo/postgresqldb" "*"
+    "@repo/constructors" "*"
+    "@repo/prismadb" "*"
     "@types/express" "^5.0.0"
     dotenv "^16.4.5"
     express "^4.21.1"
@@ -1610,6 +1608,7 @@ dotenv@16.0.3:
     "@repo/constructors" "*"
     "@repo/redisdb" "*"
     "@repo/types" "*"
+    "@types/node-cron" "^3.0.11"
     axios "^1.7.9"
     dotenv "^16.4.7"
     express-rate-limit "^7.4.1"

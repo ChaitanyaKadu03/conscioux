@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/routes/auth/signup.ts","./src/routes/auth/update_account.ts","./src/routes/search/search_coin.ts","./src/routes/settings/update_settings.ts"],"version":"5.7.2"}
+{"root":["./src/index.ts","./src/routes/profile/get_profile.ts","./src/routes/profile/update_profile.ts","./src/routes/search/search_coin.ts","./src/routes/search/search_multiple_coins.ts","./src/routes/settings/get_settings.ts","./src/routes/settings/update_settings.ts"],"version":"5.7.2"}
