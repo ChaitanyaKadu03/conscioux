@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "0.1.0",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "tsc -b && node ./dist/index.js --port 3002",
@@ -17,6 +16,7 @@
   },
   "dependencies": {
     "@repo/prismadb": "*",
+    "@repo/redisdb": "*",
     "@repo/types": "*",
     "@repo/constructors": "*",
     "@types/express": "^5.0.0",
