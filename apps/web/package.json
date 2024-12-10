@@ -14,6 +14,7 @@
     "@repo/prismadb": "*",
     "@repo/types": "*",
     "@repo/constructors": "*",
+    "@repo/constants": "*",
     "@types/axios": "^0.14.4",
     "axios": "^1.7.8",
     "next": "15.0.3",

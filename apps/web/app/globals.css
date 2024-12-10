@@ -1,3 +1,160 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-neutral-900 text-white; /* Tailwind classes */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Typography Styles */
+
+/* H1 */
+.h1 {
+  @apply text-[48px] leading-[120%] tracking-[2%] font-bold; /* Default (Desktop) */
+}
+@media (max-width: 768px) {
+  .h1 {
+    @apply text-[36px] leading-[120%] tracking-[2%] font-bold; /* Tablet */
+  }
+}
+@media (max-width: 480px) {
+  .h1 {
+    @apply text-[28px] leading-[120%] tracking-[2%] font-bold; /* Mobile */
+  }
+}
+
+/* H2 */
+.h2 {
+  @apply text-[40px] leading-[130%] tracking-[1.5%] font-semibold;
+}
+@media (max-width: 768px) {
+  .h2 {
+    @apply text-[32px] leading-[130%] tracking-[1.5%] font-semibold;
+  }
+}
+@media (max-width: 480px) {
+  .h2 {
+    @apply text-[24px] leading-[130%] tracking-[1.5%] font-semibold;
+  }
+}
+
+/* H3 */
+.h3 {
+  @apply text-[32px] leading-[130%] tracking-[1%] font-semibold;
+}
+@media (max-width: 768px) {
+  .h3 {
+    @apply text-[28px] leading-[130%] tracking-[1%] font-semibold;
+  }
+}
+@media (max-width: 480px) {
+  .h3 {
+    @apply text-[20px] leading-[130%] tracking-[1%] font-semibold;
+  }
+}
+
+/* H4 */
+.h4 {
+  @apply text-[28px] leading-[140%] tracking-[1%] font-medium;
+}
+@media (max-width: 768px) {
+  .h4 {
+    @apply text-[24px] leading-[140%] tracking-[1%] font-medium;
+  }
+}
+@media (max-width: 480px) {
+  .h4 {
+    @apply text-[18px] leading-[140%] tracking-[1%] font-medium;
+  }
+}
+
+/* H5 */
+.h5 {
+  @apply text-[24px] leading-[150%] tracking-[0.5%] font-medium;
+}
+@media (max-width: 768px) {
+  .h5 {
+    @apply text-[20px] leading-[150%] tracking-[0.5%] font-medium;
+  }
+}
+@media (max-width: 480px) {
+  .h5 {
+    @apply text-[16px] leading-[150%] tracking-[0.5%] font-medium;
+  }
+}
+
+/* H6 */
+.h6 {
+  @apply text-[20px] leading-[150%] tracking-[0%] font-normal;
+}
+@media (max-width: 768px) {
+  .h6 {
+    @apply text-[18px] leading-[150%] tracking-[0%] font-normal;
+  }
+}
+@media (max-width: 480px) {
+  .h6 {
+    @apply text-[14px] leading-[150%] tracking-[0%] font-normal;
+  }
+}
+
+/* Body */
+.body {
+  @apply text-[18px] leading-[160%] tracking-[0%] font-normal;
+}
+@media (max-width: 768px) {
+  .body {
+    @apply text-[16px] leading-[160%] tracking-[0%] font-normal;
+  }
+}
+@media (max-width: 480px) {
+  .body {
+    @apply text-[14px] leading-[160%] tracking-[0%] font-normal;
+  }
+}
+
+/* Small */
+.small {
+  @apply text-[12px] leading-[140%] tracking-[0.5%] font-light;
+}
+@media (max-width: 768px) {
+  .small {
+    @apply text-[10px] leading-[140%] tracking-[0.5%] font-light;
+  }
+}
+@media (max-width: 480px) {
+  .small {
+    @apply text-[8px] leading-[140%] tracking-[0.5%] font-light;
+  }
+}
+
+/* Primary Button */
+.btn-primary {
+  @apply text-[18px] leading-[150%] tracking-[2%] font-semibold;
+}
+@media (max-width: 768px) {
+  .btn-primary {
+    @apply text-[16px] leading-[150%] tracking-[2%] font-semibold;
+  }
+}
+@media (max-width: 480px) {
+  .btn-primary {
+    @apply text-[14px] leading-[150%] tracking-[2%] font-semibold;
+  }
+}
+
+/* Secondary Button */
+.btn-secondary {
+  @apply text-[16px] leading-[150%] tracking-[1.5%] font-medium;
+}
+@media (max-width: 768px) {
+  .btn-secondary {
+    @apply text-[14px] leading-[150%] tracking-[1.5%] font-medium;
+  }
+}
+@media (max-width: 480px) {
+  .btn-secondary {
+    @apply text-[12px] leading-[150%] tracking-[1.5%] font-medium;
+  }
+}

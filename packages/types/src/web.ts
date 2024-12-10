@@ -1,0 +1,1 @@
+export interface INavLinks { id: string, value: string, link: string }
