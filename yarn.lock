@@ -991,6 +991,7 @@ axios@*, axios@^1.7.8, axios@^1.7.9:
   dependencies:
     "@repo/constructors" "*"
     "@repo/prismadb" "*"
+    "@repo/redisdb" "*"
     "@repo/types" "*"
     "@types/express" "^5.0.0"
     dotenv "^16.4.5"
@@ -1400,11 +1401,15 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.3, cross-spawn@^7.0.5:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-"crypto_stats@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\apps\\crypto_stats":
+"crypto@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\apps\\crypto":
   version "0.1.0"
-  resolved "file:apps/crypto_stats"
+  resolved "file:apps/crypto"
   dependencies:
+    "@repo/constructors" "*"
+    "@repo/redisdb" "*"
+    "@repo/types" "*"
     "@types/ws" "^8.5.13"
+    node-cron "^3.0.3"
     ws "^8.18.0"
 
 cssesc@^3.0.0:
@@ -1587,15 +1592,20 @@ dot-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
 
-dotenv@^16.4.5, dotenv@16.0.3:
-  version "16.0.3"
-  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
-  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
+dotenv@^16.4.5:
+  version "16.4.5"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz"
+  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
 
 dotenv@^16.4.7:
   version "16.4.7"
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.7.tgz"
   integrity sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==
+
+dotenv@16.0.3:
+  version "16.0.3"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
+  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
 
 "dummy_server@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\apps\\dummy_server":
   version "0.1.0"
@@ -4724,10 +4734,15 @@ typescript-eslint@^8.15.0:
     "@typescript-eslint/parser" "8.16.0"
     "@typescript-eslint/utils" "8.16.0"
 
-typescript@^5.3.3, typescript@^5.7.2, typescript@>=2.7, typescript@>=4.2.0, typescript@5.5.4:
+typescript@^5.3.3, typescript@>=2.7, typescript@>=4.2.0, typescript@5.5.4:
   version "5.5.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.5.4.tgz"
   integrity sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==
+
+typescript@^5.7.2:
+  version "5.7.2"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-5.7.2.tgz"
+  integrity sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==
 
 typescript@5.7.2:
   version "5.7.2"
