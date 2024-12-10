@@ -1342,6 +1342,13 @@ commander@^4.0.0:
   resolved "https://registry.npmjs.org/commander/-/commander-4.1.1.tgz"
   integrity sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
 
+"communication@file:C:\\Users\\Chait\\Desktop\\Project\\Conscioux\\conscioux\\apps\\communication":
+  version "0.1.0"
+  resolved "file:apps/communication"
+  dependencies:
+    typescript "^5.7.2"
+    ws "^8.18.0"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
@@ -1408,6 +1415,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.3, cross-spawn@^7.0.5:
     "@repo/constructors" "*"
     "@repo/redisdb" "*"
     "@repo/types" "*"
+    "@types/node-cron" "^3.0.11"
     "@types/ws" "^8.5.13"
     node-cron "^3.0.3"
     ws "^8.18.0"

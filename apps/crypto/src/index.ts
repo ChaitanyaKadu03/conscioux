@@ -18,9 +18,10 @@ wss.on('connection', function connection(ws) {
             case "getAllmarket": {
                 const value = await marketAll();
                 ws.send(value);
+                break;
             }
             default: {
-                ws.send("LOL!!");
+                ws.send("YET TO IMPLEMENT!!");
             }
         }
     });
