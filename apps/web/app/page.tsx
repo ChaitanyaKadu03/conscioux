@@ -11,14 +11,13 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Hero />
-      <Features />
+      {/* <Features />
       <Work />
       <Testimonial />
       <Developers />
       <Cta />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

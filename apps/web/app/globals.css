@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-900 text-white; /* Tailwind classes */
+  @apply bg-neutral-600 text-white max-w-[1640px] 2xl:mx-auto; /* Tailwind classes */
   font-family: 'Inter', sans-serif;
 }
 
@@ -156,5 +156,35 @@ body {
 @media (max-width: 480px) {
   .btn-secondary {
     @apply text-[12px] leading-[150%] tracking-[1.5%] font-medium;
+  }
+}
+
+/* Section padding x-axis */
+.px-section {
+  @apply px-16;
+}
+@media (max-width: 768px) {
+  .px-section {
+    @apply px-12;
+  }
+}
+@media (max-width: 480px){
+  .px-section {
+    @apply px-6
+  }
+}
+
+/* Section padding x-axis */
+.py-section {
+  @apply py-12;
+}
+@media (max-width: 768px) {
+  .py-section {
+    @apply py-8;
+  }
+}
+@media (max-width: 480px){
+  .py-section {
+    @apply py-4
   }
 }
