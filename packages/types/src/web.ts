@@ -12,7 +12,8 @@ export interface IHeroConst {
 export interface IFeaturesConst {
     id: string,
     title: string,
-    body: string
+    body: string,
+    link: string
 }
 
 export interface IWorkConst {
