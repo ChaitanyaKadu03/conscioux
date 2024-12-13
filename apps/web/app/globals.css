@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-600 text-white max-w-[1640px] 2xl:mx-auto; /* Tailwind classes */
+  @apply bg-navy-400 text-white cursor-default max-w-[1640px] 2xl:mx-auto; /* Tailwind classes */
   font-family: 'Inter', sans-serif;
 }
 
@@ -21,6 +21,21 @@ body {
 @media (max-width: 480px) {
   .h1 {
     @apply text-[28px] leading-[120%] tracking-[2%] font-bold; /* Mobile */
+  }
+}
+
+/* H1 for Hero Section */
+.h1-hero {
+  @apply text-[64px] leading-[120%] tracking-[2%] font-bold; /* Default (Desktop) */
+}
+@media (max-width: 768px) {
+  .h1-hero {
+    @apply text-[48px] leading-[120%] tracking-[2%] font-bold; /* Tablet */
+  }
+}
+@media (max-width: 480px) {
+  .h1-hero {
+    @apply text-[32px] leading-[120%] tracking-[2%] font-bold; /* Mobile */
   }
 }
 
@@ -99,18 +114,48 @@ body {
   }
 }
 
-/* Body */
-.body {
+/* p1 */
+.p1 {
   @apply text-[18px] leading-[160%] tracking-[0%] font-normal;
 }
 @media (max-width: 768px) {
-  .body {
+  .p1 {
     @apply text-[16px] leading-[160%] tracking-[0%] font-normal;
   }
 }
 @media (max-width: 480px) {
-  .body {
+  .p1 {
     @apply text-[14px] leading-[160%] tracking-[0%] font-normal;
+  }
+}
+
+/* p2 */
+.p2 {
+  @apply text-[16px] leading-[160%] tracking-[0%] font-normal;
+}
+@media (max-width: 768px) {
+  .p2 {
+    @apply text-[14px] leading-[160%] tracking-[0%] font-normal;
+  }
+}
+@media (max-width: 480px) {
+  .p2 {
+    @apply text-[12px] leading-[160%] tracking-[0%] font-normal;
+  }
+}
+
+  /* p3 */
+.p3 {
+  @apply text-[14px] leading-[160%] tracking-[0%] font-normal;
+}
+@media (max-width: 768px) {
+  .p3 {
+    @apply text-[12px] leading-[160%] tracking-[0%] font-normal;
+  }
+}
+@media (max-width: 480px) {
+  .p3 {
+    @apply text-[10px] leading-[160%] tracking-[0%] font-normal;
   }
 }
 
@@ -174,17 +219,17 @@ body {
   }
 }
 
-/* Section padding x-axis */
+/* Section padding y-axis */
 .py-section {
-  @apply py-12;
+  @apply py-16;
 }
 @media (max-width: 768px) {
   .py-section {
-    @apply py-8;
+    @apply py-12;
   }
 }
 @media (max-width: 480px){
   .py-section {
-    @apply py-4
+    @apply py-6
   }
 }

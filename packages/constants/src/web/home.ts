@@ -9,8 +9,8 @@ export const navLinksConst: Array<INavLinks> = [
 ]
 
 export const heroConst: IHeroConst = {
-    headline: "Your Crypto Insights, Simplified",
-    subHeadline: "Conscioux is your all-in-one platform for intuitive, AI-driven market analysis—so you can trade with confidence",
+    headline: `Your Crypto Insights<br/><span class="text-violet-300">Simplified</span>`,
+    subHeadline: "Conscioux is your all-in-one platform for intuitive, AI-driven market analysis—so you can trade with confidence.",
     primaryCTA: "Get Started",
     secondaryCTA: "Learn More"
 }

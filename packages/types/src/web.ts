@@ -60,3 +60,19 @@ export interface IWhyConsciouxConst {
     id: string,
     messgae: string
 }
+
+// button inputs
+
+export interface IBtnInput {
+    type: EIBtnInType,
+    input: string,
+    arrow: boolean,
+    link: string,
+    background: boolean
+}
+
+export enum EIBtnInType {
+    PRIMARY = "primary",
+    SECONDARY = "secondary"
+}
+

@@ -2,12 +2,12 @@ import { featuresConst } from "@repo/constants/web";
 
 const Features = () => {
     return (
-        <div>
+        <div className="px-section py-section flex flex-row">
             {featuresConst.map((info) => {
                 return (
-                    <div key={info.id}>
-                        <h3>{info.title}</h3>
-                        <p>{info.body}</p>
+                    <div key={info.id} className="flex flex-col gap-4">
+                        <h3 className="h6">{info.title}</h3>
+                        <p className="p2">{info.body}</p>
                     </div>
                 )
             })}

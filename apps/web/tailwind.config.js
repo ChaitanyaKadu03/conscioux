@@ -63,12 +63,12 @@ export default {
         },
         neutral: {
           DEFAULT: '#575757',
-          0: '#ffffff', // white
-          10: '#fafafa',
+          0: '#ffffff', // white, text-super-highlight
+          10: '#fafafa', // white, text-high-highlight
           20: '#f5f5f5',
-          30: '#ebebeb',
+          30: '#ebebeb', // white, text-medium-highlight
           40: '#dedede',
-          50: '#bfbfbf',
+          50: '#bfbfbf', // white, text-low-highlight
           60: '#b0b0b0',
           70: '#a3a3a3',
           80: '#949494',
