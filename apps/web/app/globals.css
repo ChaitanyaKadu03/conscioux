@@ -221,7 +221,7 @@ body {
 
 /* Section padding y-axis */
 .py-section {
-  @apply py-24;
+  @apply py-32;
 }
 @media (max-width: 768px) {
   .py-section {
