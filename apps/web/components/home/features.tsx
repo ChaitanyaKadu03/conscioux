@@ -1,10 +1,12 @@
-import { featuresConst } from "@repo/constants/web";
+import { featuresConst, featuresHeadingConst } from "@repo/constants/web";
 import { IFeaturesConst } from "@repo/types/web.js";
 import Image from "next/image";
+import TopHeading from "../sub-components/topHeading";
 
 const Features = () => {
     return (
-        <div className="px-section py-section flex flex-col gap-24">
+        <div className="px-section py-section flex flex-col gap-12 items-center">
+            <TopHeading h4={featuresHeadingConst.h4} h2={featuresHeadingConst.h2} h6={featuresHeadingConst.h6}/>
             {featuresConst.map((info: IFeaturesConst) => {
                 return (
                     <div key={info.id} className={`flex ${parseInt(info.id) % 2 != 0 ? "flex-row" : "flex-row-reverse"} justify-between items-center`}>

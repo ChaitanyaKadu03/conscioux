@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-navy-400 text-white cursor-default max-w-[1640px] 2xl:mx-auto; /* Tailwind classes */
+  @apply bg-neutral-600 text-white cursor-default max-w-[1640px] 2xl:mx-auto; /* Tailwind classes */
   font-family: 'Inter', sans-serif;
 }
 
@@ -81,6 +81,21 @@ body {
 @media (max-width: 480px) {
   .h4 {
     @apply text-[18px] leading-[140%] tracking-[1%] font-medium;
+  }
+}
+
+/* H4-title */
+.h4-title {
+  @apply text-[18px] leading-[160%] tracking-[4%] font-semibold;
+}
+@media (max-width: 768px) {
+  .h4-title {
+    @apply text-[12px] leading-[160%] tracking-[4%] font-semibold;
+  }
+}
+@media (max-width: 480px) {
+  .h4-title {
+    @apply text-[12px] leading-[160%] tracking-[4%] font-semibold;
   }
 }
 

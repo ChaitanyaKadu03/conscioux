@@ -1,4 +1,5 @@
 import Cta from '@/components/home/cta'
+import Dashboard from '@/components/home/dashboard'
 import Developers from '@/components/home/developers'
 import Features from '@/components/home/features'
 import Footer from '@/components/home/footer'
@@ -13,10 +14,9 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <Dashboard />
       <Features />
       {/* <Work />
-      <Testimonial />
-      <Developers />
       <Cta />
       <Footer /> */}
     </>

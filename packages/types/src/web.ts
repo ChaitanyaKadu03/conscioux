@@ -3,10 +3,18 @@
 export interface INavLinks { id: string, value: string, link: string };
 
 export interface IHeroConst {
+    title: string,
+    text: string,
     headline: string,
     subHeadline: string,
     primaryCTA: string,
     secondaryCTA: string
+}
+
+export interface ITopHeading {
+    h4: string,
+    h2: string,
+    h6: string
 }
 
 export interface IFeaturesConst {
